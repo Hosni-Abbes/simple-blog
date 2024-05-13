@@ -1,0 +1,204 @@
+:root{
+  --main-color: #eeeeee;
+  --second-color: #ffffff;
+  --grey-color: #d1d1d1;
+  --text-color: #222222;
+  --links-color: #f44336;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--main-color);
+  color: var(--text-color);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.container{
+  max-width: 600px;
+  margin: auto;
+  margin-top: 2%;
+  padding: 2% 7%;
+}
+.d-flex{display: flex;}
+.d-block{display: block;}
+.d-none{display: none;}
+.between{justify-content: space-between;}
+.center{align-items: center;}
+.text-center{text-align: center;}
+.mb-1{margin-bottom: 10px;}
+.mt-1{margin-top: 10px;}
+.mr-1{margin-right: 10px;}
+.ml-1{margin-left: 10px;}
+.pt-3{padding-top: 3rem;}
+.pointer{cursor:pointer}
+.noresize{resize: none;}
+.w-100{width:100%}
+.bg-red{background-color: var(--links-color);}
+.bg-light{background-color: var(--main-color);}
+.color-red{color: var(--links-color)}
+
+.btn {
+  border: 1px solid var(--text-color);
+  padding: 3px 7px;
+  border-radius: 3px;
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+
+.message-container {
+  border-radius: 4px;
+  padding: 3rem 1rem;
+  background-color: var(--second-color);
+}
+.form-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  padding: 1rem 2rem;
+  background-color: var(--second-color);
+}
+.welcome {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  padding: 1rem 2rem;
+  background-color: var(--second-color);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+.auth-form input {
+  padding: 10px;
+  border: 1px solid var(--main-color);
+  outline: none;
+  margin-bottom: 10px;
+}
+.auth-form input[type='submit'] {
+  margin-bottom: 0;
+  width: 72px;
+}
+
+.article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  padding: 10px 2rem;
+  background-color: var(--second-color);
+  max-height: 225px;
+  height: 225px;
+}
+.article-top {
+  flex: 1;
+}
+.article-bottom {
+  border-top: 1px solid var(--main-color);
+  padding-top: 6px;
+}
+.no-data p {
+  color: var(--grey-color);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  text-align: center;
+  font-weight: 700;
+}
+.likes {
+  color: var(--links-color);
+  font-weight: 700;
+  cursor: pointer;
+}
+.comment {
+  width: 90%;
+  margin: 1rem auto;
+  padding: 10px;
+  background-color: var(--main-color);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form input, textarea {
+  margin-bottom: 10px;
+  padding: 6px;
+  border: 1px solid var(--main-color);
+  outline: none;
+}
+.form input[type="submit"]{
+    background-color: var(--main-color);
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.go-back {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+}
+
+.not-found {
+  margin: 10% auto;
+  text-align: center;
+}
+
+.article-skeleton {
+  max-height: 150px;
+  height: 150px;
+}
+.article-skeleton span {
+  background-color: var(--main-color);
+  display: block;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+.article-skeleton .title {
+  width: 250px;
+  height: 22px;
+}
+.article-skeleton .body {
+  width: 100%;
+  height: 15px;
+}
+.article-skeleton-bottom {
+  margin-top: 10px;
+}
+.article-skeleton-bottom span {
+    width: 40px;
+    height: 15px;
+}
+.article-skeleton-bottom span:last-child {
+  width: 140px;
+}
+.article-skeleton span {
+  animation: animateSkeleton 2s linear infinite;
+}
+
+
+@keyframes animateSkeleton {
+  0% { opacity: .9; }
+  20% { opacity: .6; }
+  50% { opacity: .4; }
+  70% { opacity: .6; }
+  100% { opacity: .9; }
+  
+}
